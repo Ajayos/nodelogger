@@ -1,1 +1,3 @@
-# nodelogger
+```
+npm install nodelogger
+```
