@@ -180,4 +180,4 @@ function log(text, type = 'info') {
 }
 global.log = log;
 // Export the start function for external use
-module.exports = { start, log };
+module.exports =  start;
