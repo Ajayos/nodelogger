@@ -81,4 +81,4 @@ The output format for each message type is as follows:
 * Fatal message (white text on red background): `[timestamp] [!]> message`
 * Horizontal line (cyan text): `>-----------------------------<`
 ## License
-nodelogger is released under the Apache-2.0 License.
+nodelogger is released under the [`Apache-2.0`](/LICENSE) License.
