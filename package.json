@@ -1,5 +1,5 @@
 {
-    "name": "nodelogger",
+    "name": "@ajayos/nodelogger",
     "version": "1.0.0",
     "description": "This is a logging module that allows the user to log messages with different severity levels. The module uses the Winston logging library and allows the user to configure various options for the log files.",
     "main": "index.js",
