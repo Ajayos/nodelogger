@@ -82,3 +82,5 @@ The output format for each message type is as follows:
 * Horizontal line (cyan text): `>-----------------------------<`
 ## License
 nodelogger is released under the [`Apache-2.0`](/LICENSE) License.
+
+>>>>>>> f8daee3e25d979267866dae8298bc858ba802427

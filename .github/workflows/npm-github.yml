@@ -1,0 +1,26 @@
+- name: Publish to GitHub npm registry
+  uses: actions/github-script@v4.2.0
+  env:
+    NPM_AUTH_TOKEN: ${{ secrets.TOKEN }}
+  with:
+    script: |
+      const { spawnSync } = require('child_process');
+      const packagePath = './package.json';
+      const packageName = require(`${packagePath}/package.json`).name;
+      const version = require(`${packagePath}/package.json`).version;
+
+      const command = `npm publish --registry=https://npm.pkg.github.com --access public`;
+
+      const result = spawnSync(command, {
+        shell: true,
+        env: {
+          ...process.env,
+          NPM_CONFIG_REGISTRY: 'https://registry.npmjs.org/',
+          NPM_TOKEN: process.env.NPM_AUTH_TOKEN,
+        },
+        cwd: packagePath,
+      });
+
+      if (result.status !== 0) {
+        throw new Error(`Failed to publish package ${packageName}@${version} to GitHub npm registry`);
+      }
