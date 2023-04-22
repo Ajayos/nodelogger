@@ -1,17 +1,17 @@
 # nodelogger
-`nodelogger` is a Node.js module for logging messages with customizable severity levels and output formats.
+`@ajayos/nodelogger` is a Node.js module for logging messages with customizable severity levels and output formats.
 
 ## Installation
-To install `nodelogger`, run:
+To install `@ajayos/nodelogger`, run:
 ```shell
-npm install nodelogger
+npm install @ajayos/nodelogger
 ```
 
 ## Usage
 First, import the module into your Node.js application:
 
 ```js
-const logger = require('nodelogger');
+const logger = require('@ajayos/nodelogger');
 ```
 Then, start the logger with the desired configuration options:
 
@@ -82,5 +82,3 @@ The output format for each message type is as follows:
 * Horizontal line (cyan text): `>-----------------------------<`
 ## License
 nodelogger is released under the [`Apache-2.0`](/LICENSE) License.
-
->>>>>>> f8daee3e25d979267866dae8298bc858ba802427
