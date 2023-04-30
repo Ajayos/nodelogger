@@ -11,7 +11,7 @@ npm install @ajayos/nodelogger
 First, import the module into your Node.js application:
 
 ```js
-const { createLogger, logger } = require('@ajayos/nodelogger');
+const { createLogger, logger, log } = require('@ajayos/nodelogger');
 ```
 Then, start the logger with the desired configuration options:
 
@@ -46,6 +46,12 @@ logger('This is a default message');
 for Line
 ```js
 logger()
+```
+
+log without logger or without saveing
+
+```js
+log('message')
 ```
 ## Configuration Options
 The following configuration options are available for the logger:
