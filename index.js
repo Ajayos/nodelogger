@@ -107,6 +107,7 @@ function winstonLog(text, type) {
         level = 'info';
         break;
     }
+    log(text, level)
     logger_.log(level, text);
 }
 
@@ -237,8 +238,8 @@ function log(text, type = 'info') {
 
 // Export the start function for external use
 module.exports =  {
-  createLogger: start,
-  log: log,
+  start,
+  log: _logger,
   logger: _logger
 };
 

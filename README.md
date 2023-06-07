@@ -11,16 +11,16 @@ npm install @ajayos/nodelogger
 First, import the module into your Node.js application:
 
 ```js
-const { createLogger, logger, log } = require('@ajayos/nodelogger');
+const logger = require('@ajayos/nodelogger');
 ```
 Then, start the logger with the desired configuration options:
 
 ```js
-await createLogger({
+await logger.start({
   timeZone: 'Asia/Kolkata',
   hour: 'numeric',
   minute: 'numeric',
-  hour12: false,
+  hour12: true,
   filename: 'logs/%DATE%.log',
   datePattern: 'YYYY-MM/DD',
   zippedArchive: false,
@@ -33,26 +33,21 @@ await createLogger({
 Once the logger is started, you can log messages with the log method:
 
 ```js
-logger('This is an informational message', 'info');
-logger('This is a warning message', 'warn');
-logger('This is an error message', 'error');
+logger.log('This is an informational message', 'info');
+logger.log('This is a warning message', 'warn');
+logger.log('This is an error message', 'error');
 ```
 You can also log messages with the default severity level by omitting the second argument:
 
 ```js
-logger('This is a default message');
+logger.log('This is a default message');
 ```
 
 for Line
 ```js
-logger()
+logger.log()
 ```
 
-log without logger or without saveing
-
-```js
-log('message')
-```
 ## Configuration Options
 The following configuration options are available for the logger:
 
