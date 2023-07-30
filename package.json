@@ -1,6 +1,6 @@
 {
     "name": "@ajayos/nodelogger",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "This is a logging module that allows the user to log messages with different severity levels. The module uses the Winston logging library and allows the user to configure various options for the log files.",
     "main": "index.js",
     "scripts": {
@@ -22,9 +22,6 @@
     "license": "Apache-2.0",
     "bugs": {
         "url": "https://github.com/Ajayos/nodelogger/issues"
-    },
-    "publishConfig": {
-      "registry": "https://npm.pkg.github.com"
     },
     "homepage": "https://github.com/Ajayos/nodelogger#readme",
     "dependencies": {
