@@ -1,4 +1,4 @@
-const Logger = require("./index");
+const { default: Logger } = require("./index");
 
 // Initialize the logger with options
 const logger = new Logger({
@@ -14,9 +14,10 @@ const logger = new Logger({
 });
 
 // Log some messages
+logger.line();
 logger.error("This is an error message");
 logger.warn("This is a warning message");
 logger.info("This is an info message");
 logger.debug("This is a debug message");
-logger.fatal("This is a fatal message");
 logger.error("err")
+logger.line();
